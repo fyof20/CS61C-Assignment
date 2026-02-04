@@ -45,7 +45,7 @@ Image *readData(char *filename)
 	}
 	//读取像素数据
 	for(int i=0;i<height;i++){
-		for(int j==0;j<width;j++){
+		for(int j=0;j<width;j++){
 			int r,g,b;
 			fscanf(fp,"%d %d %d",&r,&g,&b);
 			img->image[i][j].R=r;
@@ -55,8 +55,6 @@ Image *readData(char *filename)
 	}
 	fclose(fp);
 	return img;
-
-
 }
 
 //Given an image, prints to stdout (e.g. with printf) a .ppm P3 file with the image's data.
@@ -66,8 +64,8 @@ void writeData(Image *image)
 	printf("P3\n");
 	printf("%d %d",image->cols,image->rows);
 	printf("255\n");
-	for(int i=0;i<image->rows;i++){
-		for(int j=0;j<image->cols;j++){
+	for(unsigned int i=0;i<image->rows;i++){
+		for(unsigned int j=0;j<image->cols;j++){
 			printf("%3d %3d %3d",image->image[i][j].R,image->image[i][j].G,image->image[i][j].B);
 			if(j<image->cols-1){
 				printf("   ");
@@ -81,7 +79,7 @@ void writeData(Image *image)
 void freeImage(Image *image)
 {
 	//YOUR CODE HERE
-	for(int i=0;i<image->rows;i++){
+	for(unsigned int i=0;i<image->rows;i++){
 		free(image->image[i]);
 	}
 	free(image->image);
