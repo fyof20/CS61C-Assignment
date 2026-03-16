@@ -137,9 +137,6 @@ end TCL_Generic;
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="AddMachine"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(110,310)" name="Constant">
-      <a name="width" val="8"/>
-    </comp>
     <comp lib="0" loc="(220,340)" name="Clock">
       <a name="appearance" val="classic"/>
     </comp>
@@ -159,21 +156,33 @@ end TCL_Generic;
       <a name="type" val="output"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="3" loc="(170,320)" name="Adder"/>
+    <comp lib="0" loc="(90,240)" name="Constant">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="3" loc="(150,250)" name="Adder"/>
     <comp lib="5" loc="(250,270)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <comp lib="9" loc="(405,165)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
     </comp>
-    <wire from="(110,310)" to="(130,310)"/>
-    <wire from="(170,320)" to="(190,320)"/>
-    <wire from="(190,300)" to="(190,320)"/>
-    <wire from="(190,300)" to="(250,300)"/>
+    <wire from="(150,250)" to="(210,250)"/>
+    <wire from="(210,250)" to="(210,300)"/>
+    <wire from="(210,250)" to="(490,250)"/>
+    <wire from="(210,300)" to="(250,300)"/>
     <wire from="(220,340)" to="(250,340)"/>
     <wire from="(250,340)" to="(260,340)"/>
     <wire from="(260,330)" to="(260,340)"/>
+    <wire from="(310,300)" to="(400,300)"/>
+    <wire from="(400,300)" to="(400,420)"/>
+    <wire from="(400,300)" to="(490,300)"/>
+    <wire from="(490,240)" to="(490,250)"/>
     <wire from="(490,240)" to="(500,240)"/>
+    <wire from="(490,290)" to="(490,300)"/>
     <wire from="(490,290)" to="(500,290)"/>
+    <wire from="(90,240)" to="(110,240)"/>
+    <wire from="(90,260)" to="(110,260)"/>
+    <wire from="(90,260)" to="(90,420)"/>
+    <wire from="(90,420)" to="(400,420)"/>
   </circuit>
 </project>
